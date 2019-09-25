@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Delitos de colombianos</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <nav class="navbar navbar-dark bg-info mb-4">
+        <h1 class="navbar-brand">Visualización tarea 3.1</h1>
+    </nav>
+    <div class="container">
+        <h1 class="font-weight-bold">Los delitos por parte de colombianos se expande por casi toda America</h1>
+        <h5>La mayoria de paises americanos tienen un numero de colombianos detenidos mayor a 100. Además de otros
+            paises ubicados en Europa, el sur de Asia y medio oriente principalmente</h5>
+    </div>
+    <div class="container">
+        <div class='tableauPlaceholder' id='viz1569350629764' style='position: relative'><noscript><a href='#'><img
+                        alt=' '
+                        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;DelitosColombianos&#47;Dashboard1&#47;1_rss.png'
+                        style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='DelitosColombianos&#47;Dashboard1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image'
+                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;DelitosColombianos&#47;Dashboard1&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='filter' value='publish=yes' /></object></div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1569350629764');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if (divElement.offsetWidth > 800) { vizElement.style.width = '1000px'; vizElement.style.height = '1027px'; }
+            else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '1027px'; }
+            else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; }
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+        <a class="font-italic" href="https://www.datos.gov.co/Estad-sticas-Nacionales/Colombianos-detenidos-en-el-exterior/e97j-vuf7">Fuente de los datos </a>
+        <p class="font-italic">By Juan Camilo Sanguino Perez</p>
+    </div>
+    <div class="container my-5 col-8">
+        <h3 class="font-weight-bold">What</h3>
+        <p>Fuente de datos: El dataset usado es un dataset geometry, ya que cuenta con los atributos de latitud y longitud </p>
+        <p>Atributos del dataset: Para el dataset se usaron los atributos categoricos: Delito y País Prisión. Los atributos ordenados, cuantitativos y secuenciales: TotalDelitosPais, TotalPorDelitoPais</p>
+    </div>
+    <div class="container my-5 col-8">
+        <h3 class="font-weight-bold">Why</h3>
+        <h5> Tareas Primarias: </h5>
+        <ul>
+            <li>Tarea 1: Identificar comportamientos geograficos en los delitos realizados por los colombianos (Identify, distribution)</li>
+            <li>Tarea 2: Hallar el total de delitos por país y el total por delitos de un país (Derive, many-attributes) </li>
+        </ul>
+        <h5> Tareas Secundarias: </h5>
+        <ul>
+            <li>Tarea 3: Comparar la cantidad de delitos en 2 paises (Compare, one-attribute)</li>
+            <li>Tarea 4: Identificar extremos en la cantidad de delitos (por tipo de delito) en los paises</li>
+        </ul>
+    </div>
+    <div class="container my-5 col-8">
+        <h3 class="font-weight-bold">How</h3>
+        <p>
+        <h5>Para el primer modismo:</h5>
+        Se emplearon el eje vertical y horizontal con la latitud y longitud. <br>
+        Se uso la iluminación para representar el atributo ordenado -> cuantitativo -> secuencial del total de delitos. <br>
+        En la parte derecha se usaron los filtros por tipo de delito a manera de lista y el filtro por cantidad de delitos usando un express <br>
+        <h5>Para el modismo de abajo:</h5>
+        Se usaron como marcas las lineas. <br>
+        El eje x se uso a manera de "separated horizontallly" y "aligned vertically"
+        Y se ordenaron de manera descendente por la cantidad de delitos
+        </p>
+    </div>
+    <div class="container my-5 col-8">
+            <h3 class="font-weight-bold">Conclusiones</h3>
+            <p>
+            En la mayor parte de america se han presentado delitos por casos de colombianos donde los que 
+            mas resaltan son los delitos por narcotrafico y por robo/urto siendo Estados unidos y Ecuador 
+            los mas afectados. <br>
+            Por otra parte paises como España presentan una alta tasa de delitos, pero la mayoria de ellos
+            son desconocidos.
+            </p>
+        </div>
+        <div class="container-fluid navbar-dark bg-info py-4">
+            <div class="row justify-content-end px-4">
+                <h5 class="text-light">24/09/2019</h5>
+            </div>
+        </div>
+</body>
+
+</html>
